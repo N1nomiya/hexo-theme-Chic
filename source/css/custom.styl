@@ -2,3 +2,29 @@
 // Custom style
 // ==============================
 //  Also You can override the variables in variable.styl to customize the style
+
+// Dark mode for pre
+.dark-theme .post-content figure,
+.dark-theme .post-content figure.highlight .code pre {
+    background-color: $dark-post-blockquote-background-color;
+    color: $dark-mode-pre-foreground-color;
+}
+
+// Dark mode for pre line number
+.dark-theme .post-content figure.highlight .gutter pre {
+    background-color: $dark-post-blockquote-background-color;
+    color: $dark-mode-pre-line-number-foreground-color;
+}
+
+h1 {
+	font-size: 35px;
+	font-weight: 800
+}
+
+p {
+	font-size 1.1em
+}
+
+a {
+	font-size 1.1em
+}

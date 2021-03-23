@@ -10,23 +10,27 @@
             <h1 class="post-title"><%= page.title %></h1>
             <% if(theme.post_meta_enable){ %>
                 <div class="post-meta">
-                    <% if(theme.post_author_enable && config.author){ %>
-                        Author: <a itemprop="author" rel="author" href="/"><%- config.author %></a>
-                    <% } %>
-
+                    <p>
+                    
+                    <div>
                     <% if(page.date && theme.post_date_enable){ %>
                         <span class="post-time">
-                        Date: <a href="#"><%- date(page.date, theme.date_format)  %>&nbsp;&nbsp;<%- time(page.date, theme.time_format)%></a>
+                        Date： <a href="#"><%- date(page.date, theme.date_format)  %>&nbsp;&nbsp;<%- time(page.date, theme.time_format)%></a>
                         </span>
                     <% } %>
+                    </div>
+
+                    <div>
                     <% if(page.categories.length!==0 && theme.post_category_enable){ %>
                         <span class="post-category">
-                    Category:
+                        Category：
                             <% page.categories.forEach(item=>{ %>
                                 <a href="<%- url_for(item.path) %>"><%- item.name %></a>
                             <% }) %>
                         </span>
                     <% } %>
+                    </div>
+                    </p>
                 </div>
             <% } %>
         </header>
