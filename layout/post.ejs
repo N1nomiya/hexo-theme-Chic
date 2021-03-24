@@ -1,6 +1,10 @@
 <%- partial('_page/post', {post: page, index: false}) %>
 
 
-<div class="post-wrap" style="margin-top: 7em;">
-<%- partial('_plugins/disqus') %>
-</div>
+<div class="container">
+	<article class="post-wrap" style="margin-top: 7em;">
+		<div class="post-content">
+			<%- partial('_plugins/disqus') %>
+		</div>	
+	</article>
+</div>	
